@@ -1,8 +1,12 @@
 #!/bin/bash
 
-# 4. piemers - speciel shell mainigie
-a=5
-b=10
+# 4. piemers - operacijas ar argumentiem
+if [ $# == 2 ]
+# ja (if) skriptam nododto argumentu skaits ($#) ir vienads (==) ar$2
+then
+# tad tiek izpilditas sekojosasdarbibas lidz ... 
+a=$1
+b=$2
 val41=`expr $a + $b`
 echo "$a + $b = "$val41
 val42=`expr $a - $b`
@@ -13,6 +17,8 @@ val44=`expr $a / $b`
 echo "$a / $b = "$val44
 val45=`expr $a % $b`
 echo "$a % $b = "$val45
+# ... sai vietai
+fi
 
 # 3. pimers - operacijas ar mainigajiem
 : <<'END'
